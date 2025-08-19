@@ -1,0 +1,113 @@
+/* Variables globales */
+:root {
+  --color-primario: #0044cc;
+  --color-secundario: #ff9900;
+  --color-texto: #333;
+  --fuente-base: 'Segoe UI', sans-serif;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: var(--color-primario);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background: var(--color-secundario);
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+section {
+  padding: 2rem;
+}
+
+section:nth-child(even) {
+  background: #f4f4f4;
+}
+
+/* Galería con Grid */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Formulario */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: var(--color-primario);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: var(--color-secundario);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+}
+
+/* Ayudas responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
